@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="wrapper">
           <SideBar />
-          <main>{children}</main>
+          {children}
           <Navigation />
         </div>
         <Script src="https://kit.fontawesome.com/e301a7d0fc.js" crossorigin="anonymous" />

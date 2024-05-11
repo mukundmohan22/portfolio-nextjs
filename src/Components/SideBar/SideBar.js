@@ -7,7 +7,7 @@ const SideBar = () => {
     <div className="sidebar box-shadow">
       <div className="sidebar_header">
         <div className="image-container">
-          <Image src="/images/mukund.png" alt="Icon" fill className={"image"} />
+          <Image src="/images/my-pic.png" alt="Icon" fill className={"image"} />
         </div>
         <div className="sidebar_header--title">Mukund Mohan</div>
         <div className="sidebar_header--desc">Full-Stack Developer</div>

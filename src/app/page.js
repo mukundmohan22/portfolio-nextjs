@@ -1,5 +1,10 @@
-import Home from "@/Components/Home/Home";
+import "./Home.scss";
 
 export default function page() {
-  return <Home />;
+  return (
+    <div className="container box-shadow">
+      <div className="title">About</div>
+      <div className="description"></div>
+    </div>
+  );
 }

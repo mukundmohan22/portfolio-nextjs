@@ -15,14 +15,15 @@
         align-items: center;
         .image-container {
             margin-top: -6rem;
-            width: 9.8rem;
-            height: 9.8rem;
+            width: 10rem;
+            height: 10rem;
             color: #6f7275;
             background: linear-gradient(145deg, #cacaca, #f0f0f0);
             border-radius: 0.5rem;
             box-shadow:
                 5px 5px 10px #aaaaaa,
                 -5px -5px 10px #ffffff;
+            overflow: hidden;
             img {
                 border-radius: 0.5rem;
             }
@@ -52,6 +53,7 @@
                 border-radius: 0.5rem;
                 -webkit-transition: all 0.3s;
                 transition: all 0.3s;
+                
                 &:active {
                     -webkit-transform: scale(0.98);
                     transform: scale(0.98);
@@ -83,12 +85,13 @@
     }
     &_content {
         padding: 1rem;
+        background-color: #ffffff;
         // box-shadow:
         //     5px 5px 10px #aaaaaa,
         //     -5px -5px 10px #ffffff;
-        box-shadow:
-            41px 41px 82px #bebebe,
-            -41px -41px 82px #ffffff;
+        // box-shadow:
+        //     41px 41px 82px #bebebe,
+        //     -41px -41px 82px #ffffff;
         border-radius: 0.5rem;
         &--list {
             list-style-type: none;
@@ -101,6 +104,7 @@
                     gap: 1rem;
                     justify-content: flex-start;
                     align-items: center;
+
                     & .mobile {
                         background-image: linear-gradient(90deg, #fe0944, #ff7878);
                         -webkit-background-clip: text;

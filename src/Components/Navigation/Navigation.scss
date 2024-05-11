@@ -19,7 +19,6 @@
             5px 5px 10px #aaaaaa,
             -5px -5px 10px #ffffff;
         border-radius: 0.5rem;
-        transition: all 0.3s;
         font-size: 1.6rem;
     }
 }
@@ -31,6 +30,9 @@
         display: block;
     }
     &_container {
+        & a {
+            text-decoration: none;
+        }
         ul {
             list-style-type: none;
             padding-inline-start: 0;
@@ -49,7 +51,6 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            // background: linear-gradient(145deg, #cacaca, #f0f0f0);
             border: none;
             border-radius: 0.5rem;
             box-shadow:
@@ -58,6 +59,12 @@
             color: #6f7275;
             cursor: pointer;
             gap: 0.5rem;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            &:active {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+            }
             & i {
                 font-size: 1.4rem;
             }
@@ -82,4 +89,55 @@
             -webkit-text-fill-color: transparent;
         }
     }
+}
+
+.popup {
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    background: #eaeaea;
+    padding: 1rem;
+    // overflow: hidden;
+    &-overlay {
+        margin-bottom: 1rem;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        width: 60%;
+        height: 100vh;
+        top: 0;
+        left: -50rem;
+        @include min-width(sm) {
+            display: none;
+        }
+    }
+    &-content {
+        margin-top: 5rem;
+    }
+    &-close-btn {
+        position: absolute;
+        right: -1.2rem;
+        top: 0;
+        z-index: 3;
+        & button {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: none;
+            cursor: pointer;
+            box-shadow:
+                5px 5px 10px #aaaaaa,
+                -5px -5px 10px #ffffff;
+            border-radius: 50%;
+            transition: all 0.3s;
+            font-size: 1.6rem;
+        }
+    }
+}
+.showPopup {
+    transition: 0.5s;
+    left: 0;
+}
+.hidePopup {
+    transition: 0.5s;
+    left: -50rem;
 }
