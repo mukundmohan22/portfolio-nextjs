@@ -1,6 +1,30 @@
 import Image from "next/image";
 import React from "react";
 import "./SideBar.scss";
+import Link from "next/link";
+
+const SOCIAL = [
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/mukundmohan22/",
+    className: "fa-brands fa-linkedin-in",
+  },
+  {
+    name: "github",
+    url: "https://github.com/mukundmohan22",
+    className: "fa fa-github",
+  },
+  {
+    name: "instagram",
+    url: "https://www.instagram.com/_mukund/",
+    className: "fa-brands fa-instagram",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/mukundmohan22",
+    className: "fa-brands fa-x-twitter",
+  },
+];
 
 const SideBar = () => {
   return (
@@ -13,19 +37,15 @@ const SideBar = () => {
         <div className="sidebar_header--desc">Full-Stack Developer</div>
         <div className="sidebar_header--social">
           <ul className="sidebar_header--social">
-            <li>
-              <i className="fa-brands fa-linkedin-in"></i>
-            </li>
-            <li>
-              <i className="fa-brands fa-github"></i>
-            </li>
-            <li>
-              <i className="fa-brands fa-instagram"></i>
-            </li>
-
-            <li>
-              <i className="fa-brands fa-x-twitter"></i>
-            </li>
+            {SOCIAL.map((el, i) => {
+              return (
+                <Link href={el.url} key={i} target="_blank">
+                  <li>
+                    <i className={el.className}></i>
+                  </li>
+                </Link>
+              );
+            })}
           </ul>
         </div>
       </div>

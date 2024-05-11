@@ -38,22 +38,23 @@
             align-items: center;
             list-style-type: none;
             padding-inline-start: 0;
-            li {
-                margin: 10px;
-                min-width: 2rem;
-                min-height: 2.2rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                box-shadow:
-                    5px 5px 10px #aaaaaa,
-                    -5px -5px 10px #ffffff;
-                padding: 0.2rem;
-                border-radius: 0.5rem;
-                -webkit-transition: all 0.3s;
-                transition: all 0.3s;
-                
+            a {
+                li {
+                    margin: 10px;
+                    min-width: 2rem;
+                    min-height: 2.2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    box-shadow:
+                        5px 5px 10px #aaaaaa,
+                        -5px -5px 10px #ffffff;
+                    padding: 0.2rem;
+                    border-radius: 0.5rem;
+                    -webkit-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
                 &:active {
                     -webkit-transform: scale(0.98);
                     transform: scale(0.98);

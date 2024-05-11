@@ -34,9 +34,9 @@ const Navigation = () => {
     return (
       <div className="navigation_container">
         <ul>
-          {NAV_ROUTES.map((el) => {
+          {NAV_ROUTES.map((el, i) => {
             return (
-              <Link href={el.path} onClick={() => setMobileMenuOpen(false)}>
+              <Link href={el.path} key={i} onClick={() => setMobileMenuOpen(false)}>
                 <li
                   className={`navigation_container--item ${mobileMenu ? "flex-direction-row" : ""} ${
                     pathname === el.path ? "selected" : ""
