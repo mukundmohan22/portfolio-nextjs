@@ -1,0 +1,57 @@
+@import "../../styles/mixins";
+
+.mobile-menu {
+    display: block;
+    position: absolute;
+    font-size: 1.8rem;
+    top: 0.8rem;
+    left: 0.8rem;
+    cursor: pointer;
+    @include min-width(sm) {
+        display: none;
+    }
+}
+.navigation {
+    max-height: 26.5rem;
+    padding: 1rem;
+    &_container {
+        ul {
+            list-style-type: none;
+            padding-inline-start: 0;
+            margin: 0;
+        }
+        &--item {
+            padding: 1rem;
+            margin: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: linear-gradient(145deg, #cacaca, #f0f0f0);
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow:
+                5px 5px 10px #aaa,
+                -5px -5px 10px #fff;
+            color: #6f7275;
+            cursor: pointer;
+            & i {
+                font-size: 1.4rem;
+            }
+            & p {
+                font-size: 1rem;
+            }
+            &:hover {
+                background: linear-gradient(90deg, #5232c1, #15f1f1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        & .selected {
+            background: linear-gradient(90deg, #5232c1, #15f1f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
