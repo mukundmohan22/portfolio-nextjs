@@ -10,15 +10,36 @@
     @include min-width(sm) {
         display: none;
     }
+    button {
+        margin: 10px;
+        padding: 0.5rem;
+        border: none;
+        cursor: pointer;
+        box-shadow:
+            5px 5px 10px #aaaaaa,
+            -5px -5px 10px #ffffff;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+        font-size: 1.6rem;
+    }
 }
 .navigation {
+    display: none;
     max-height: 26.5rem;
     padding: 1rem;
+    @include min-width(sm) {
+        display: block;
+    }
     &_container {
         ul {
             list-style-type: none;
             padding-inline-start: 0;
             margin: 0;
+        }
+        .flex-direction-row {
+            flex-direction: row;
+            gap: 2rem;
+            justify-content: flex-start;
         }
         &--item {
             padding: 1rem;
@@ -28,7 +49,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            background: linear-gradient(145deg, #cacaca, #f0f0f0);
+            // background: linear-gradient(145deg, #cacaca, #f0f0f0);
             border: none;
             border-radius: 0.5rem;
             box-shadow:
@@ -36,6 +57,7 @@
                 -5px -5px 10px #fff;
             color: #6f7275;
             cursor: pointer;
+            gap: 0.5rem;
             & i {
                 font-size: 1.4rem;
             }
@@ -46,6 +68,12 @@
                 background: linear-gradient(90deg, #5232c1, #15f1f1);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+            }
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            &:active {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
             }
         }
         & .selected {

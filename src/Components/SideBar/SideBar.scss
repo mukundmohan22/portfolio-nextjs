@@ -2,7 +2,7 @@
 .sidebar {
     width: calc(100vw - 4.5rem);
     position: relative;
-    margin: 1rem;
+    margin: 0 1rem;
     padding: 1rem;
     @include min-width(sm) {
         width: 18rem;
@@ -47,9 +47,15 @@
                 cursor: pointer;
                 box-shadow:
                     5px 5px 10px #aaaaaa,
-                    -5px -5px 10px #aaaaaa;
+                    -5px -5px 10px #ffffff;
                 padding: 0.2rem;
                 border-radius: 0.5rem;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                &:active {
+                    -webkit-transform: scale(0.98);
+                    transform: scale(0.98);
+                }
                 &:first-child {
                     color: #0b66c2;
                 }
@@ -58,12 +64,10 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
-                i {
-                    &:hover {
-                        background: linear-gradient(90deg, #5232c1, #15f1f1);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
+                &:hover {
+                    background: linear-gradient(90deg, #5232c1, #15f1f1);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
             a {
@@ -79,9 +83,12 @@
     }
     &_content {
         padding: 1rem;
+        // box-shadow:
+        //     5px 5px 10px #aaaaaa,
+        //     -5px -5px 10px #ffffff;
         box-shadow:
-            5px 5px 10px #aaaaaa,
-            -5px -5px 10px #ffffff;
+            41px 41px 82px #bebebe,
+            -41px -41px 82px #ffffff;
         border-radius: 0.5rem;
         &--list {
             list-style-type: none;
@@ -147,8 +154,17 @@
                 -5px -5px 10px #ffffff;
             border: none;
             cursor: pointer;
+            background: linear-gradient(105deg, #5232c1, #15f1f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
             i {
                 font-size: 1.6rem;
+            }
+            &:active {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
             }
         }
     }
