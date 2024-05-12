@@ -10,6 +10,8 @@ html.dark-theme {
     --text-shadown: "";
     --linear-grd-text-color: linear-gradient(105deg, #ffffff, #ffffff);
     --label-color: #757575;
+    --box-shadow-active: inset 1px 1px 2px #141414, inset -1px -1px 2px #212121;
+    --input-box-shadow: inset 2px 2px 5px #141414, inset -5px -5px 10px #212121;
 }
 
 html {
@@ -21,4 +23,8 @@ html {
     --box-shadow-hover: -2px -2px 5px #aaaaaa, 2px 2px 5px #ffffff;
     --linear-grd-text-color: linear-gradient(105deg, #5232c1, #15f1f1);
     --label-color: #6f7275;
+
+    --box-shadow-active: inset 1px 1px 2px #ffffff, inset -1px -1px 2px #aaaaaa;
+    // --input-box-shadow: inset 2px 2px 5px #ffffff, inset -5px -5px 10px #aaaaaa;
+    --input-box-shadow: inset 5px 5px 5px #aaaaaa, inset -5px -5px 5px #ffffff;
 }

@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .theme-container {
     position: absolute;
     right: 0.5rem;
@@ -7,6 +9,9 @@
     justify-content: center;
     align-items: center;
     gap: 0.3rem;
+    @include min-width(sm) {
+        right: 1rem;
+    }
     & span {
         color: var(--text-color);
         font-size: 0.8rem;

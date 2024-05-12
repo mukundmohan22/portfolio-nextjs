@@ -85,6 +85,10 @@ const SideBar = () => {
           <i className="fa-solid fa-download"></i>
           Download CV
         </button>
+        <Link href="/contact">
+          <i className="fa-regular fa-address-book"></i>
+          Contact Me
+        </Link>
       </div>
     </div>
   );

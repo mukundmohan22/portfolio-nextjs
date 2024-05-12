@@ -1,3 +1,65 @@
+@import "../styles/mixins";
 .home {
-    padding: 1rem !important;
+    & .content {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        min-width: 43rem;
+
+        & .hCard {
+            max-width: 100%;
+            display: flex;
+            gap: 2rem;
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--box-shadow);
+            &:first-child {
+                background-color: rgba($color: #ff7878, $alpha: 0.1);
+            }
+            &:nth-child(2) {
+                background-color: rgba($color: #5232c1, $alpha: 0.1);
+            }
+            &:last-child {
+                background-color: rgba($color: #ddbdfc, $alpha: 0.1);
+            }
+
+            @include min-width(sm) {
+                min-width: 41%;
+                max-width: 41%;
+            }
+            &--img {
+                font-size: 1.8rem;
+                & .fa-swatchbook {
+                    background-image: linear-gradient(90deg, #fe0944, #ff7878);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                & .fa-code {
+                    background: linear-gradient(105deg, #5232c1, #15f1f1);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                & .fa-window-restore {
+                    background-image: linear-gradient(80deg, #ddbdfc, #96c8fb);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            &--content {
+                &-title {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    padding: 0 0.5rem 0.5rem 0.5rem;
+                }
+                &-description {
+                    padding: 0 0.5rem 0.5rem 0.5rem;
+                    font-size: 0.9rem;
+                    color: var(--label-color);
+                }
+            }
+        }
+    }
 }
