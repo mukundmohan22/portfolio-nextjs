@@ -29,7 +29,7 @@ const NAV_ROUTES = [
 const Navigation = () => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  console.log("pathname", pathname);
   const renderNavigationLinks = (mobileMenu = false) => {
     return (
       <div className="navigation_container">
