@@ -18,7 +18,7 @@ const ContactForm = () => {
           <input type="text" placeholder="Email Address" name="email" required />
         </div>
         <div className="contact-form--row">
-          <textarea type="text" placeholder="Your Message" rows={2} name="message" required />
+          <textarea type="text" placeholder="Your Message" rows={4} name="message" required />
         </div>
         <div className="contact-form--row">
           <button type="submit">

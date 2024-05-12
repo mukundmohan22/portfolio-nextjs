@@ -62,7 +62,10 @@ body {
     position: relative;
     font-size: 1.8rem;
     font-weight: 500;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    @include min-width(sm) {
+      padding: 1rem 2rem;
+    }
     &::after {
       content: " ";
       border-top: 4px solid var(--text-color);
@@ -75,12 +78,18 @@ body {
     }
   }
   & .description {
-    padding: 1rem 2rem;
+    padding: 1rem;
+    @include min-width(sm) {
+      padding: 1rem 2rem;
+    }
   }
   & .sub-title {
     font-size: 1.2rem;
     font-weight: 500;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    @include min-width(sm) {
+      padding: 1rem 2rem;
+    }
   }
 }
 // Global Style for Next Image

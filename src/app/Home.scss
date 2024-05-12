@@ -1,21 +1,31 @@
 @import "../styles/mixins";
 .home {
+    // overflow: scroll;
+    // min-width: 23rem;
     & .content {
         box-sizing: border-box;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         gap: 1rem;
-        padding: 1rem 2rem;
-        min-width: 43rem;
-
+        padding: 1rem;
+        @include min-width(sm) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-width: 23rem;
+            padding: 1.5rem;
+        }
         & .hCard {
             max-width: 100%;
             display: flex;
-            gap: 2rem;
-            padding: 1.5rem;
+            gap: 1rem;
             border-radius: 20px;
             box-shadow: var(--box-shadow);
+            padding: 1rem;
+            @include min-width(sm) {
+                gap: 2rem;
+                max-width: 17.6rem;
+            }
             &:first-child {
                 background-color: rgba($color: #ff7878, $alpha: 0.1);
             }
@@ -26,10 +36,6 @@
                 background-color: rgba($color: #ddbdfc, $alpha: 0.1);
             }
 
-            @include min-width(sm) {
-                min-width: 41%;
-                max-width: 41%;
-            }
             &--img {
                 font-size: 1.8rem;
                 & .fa-swatchbook {

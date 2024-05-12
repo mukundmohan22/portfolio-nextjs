@@ -1,11 +1,16 @@
+@import "../../styles/mixins";
 .contact {
     &-form {
         &--row {
-            padding: 1rem 2rem;
+            padding: 1rem;
+            @include min-width(sm) {
+                padding: 1rem 2rem;
+            }
             & input[type="text"],
             textarea {
                 box-shadow: var(--input-box-shadow);
-                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
                 box-sizing: border-box;
                 transition: all 0.2s ease-in-out;
                 border: 0;
