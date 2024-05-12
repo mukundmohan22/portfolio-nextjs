@@ -2,6 +2,8 @@
 
 @import "../styles/_mixins.scss";
 
+@import "../styles/_variables.scss";
+
 .poetsen-one-regular {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
@@ -35,17 +37,17 @@ body {
   }
 }
 
+html,
+body {
+  background-color: var(--color-bg);
+}
+* {
+  color: var(--text-color);
+}
 .box-shadow {
   padding: 2rem;
   border-radius: 20px;
-  background: #eaeaea;
-  // box-shadow:
-  //   41px 41px 82px #bebebe,
-  //   -41px -41px 82px #ffffff;
-
-  box-shadow:
-    5px 5px 10px #aaa,
-    -5px -5px 10px #fff;
+  box-shadow: var(--box-shadow);
 }
 
 .container {

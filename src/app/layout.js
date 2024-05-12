@@ -1,6 +1,7 @@
 import "./globals.scss";
 import Navigation from "@/Components/Navigation/Navigation";
 import SideBar from "@/Components/SideBar/SideBar";
+import ThemeSwitcher from "@/Components/ThemeSwitcher/ThemeSwitcher";
 
 export const metadata = {
   title: "Mukund Mohan | Full-Stack Developer",
@@ -9,9 +10,11 @@ export const metadata = {
 import Script from "next/script";
 
 export default function RootLayout({ children }) {
+  const theme = "dark-theme";
   return (
-    <html lang="en">
+    <html lang="en" className={theme} id="theme-switcher">
       <body>
+        <ThemeSwitcher />
         <div className="wrapper">
           <SideBar />
           {children}

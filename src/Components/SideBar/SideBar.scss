@@ -17,12 +17,9 @@
             margin-top: -6rem;
             width: 10rem;
             height: 10rem;
-            color: #6f7275;
-            background: linear-gradient(145deg, #cacaca, #f0f0f0);
             border-radius: 0.5rem;
-            box-shadow:
-                5px 5px 10px #aaaaaa,
-                -5px -5px 10px #ffffff;
+            box-shadow: var(--box-shadow);
+            transition: all 0.2s ease-in-out;
             overflow: hidden;
             img {
                 border-radius: 0.5rem;
@@ -47,30 +44,24 @@
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
-                    box-shadow:
-                        5px 5px 10px #aaaaaa,
-                        -5px -5px 10px #ffffff;
                     padding: 0.2rem;
                     border-radius: 0.5rem;
-                    -webkit-transition: all 0.3s;
-                    transition: all 0.3s;
-                }
-                &:active {
-                    -webkit-transform: scale(0.98);
-                    transform: scale(0.98);
-                }
-                &:first-child {
-                    color: #0b66c2;
-                }
-                &:nth-child(3) {
-                    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                &:hover {
-                    background: linear-gradient(90deg, #5232c1, #15f1f1);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    transition: all 0.2s ease-in-out;
+                    text-shadow: var(--text-shadown);
+                    box-shadow: var(--box-shadow);
+                    &:hover {
+                        box-shadow: var(--box-shadow-hover);
+                        background: linear-gradient(
+                            45deg,
+                            #f09433 0%,
+                            #e6683c 25%,
+                            #dc2743 50%,
+                            #cc2366 75%,
+                            #bc1888 100%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
             a {
@@ -86,13 +77,7 @@
     }
     &_content {
         padding: 1rem;
-        background-color: #ffffff;
-        // box-shadow:
-        //     5px 5px 10px #aaaaaa,
-        //     -5px -5px 10px #ffffff;
-        // box-shadow:
-        //     41px 41px 82px #bebebe,
-        //     -41px -41px 82px #ffffff;
+        background-color: var(--color-bg);
         border-radius: 0.5rem;
         &--list {
             list-style-type: none;
@@ -105,7 +90,6 @@
                     gap: 1rem;
                     justify-content: flex-start;
                     align-items: center;
-
                     & .mobile {
                         background-image: linear-gradient(90deg, #fe0944, #ff7878);
                         -webkit-background-clip: text;
@@ -124,10 +108,10 @@
                     & .item-container {
                         & .label {
                             font-size: 0.6rem;
-                            color: #6f7275;
+                            color: var(--label-color);
                         }
                         & .value {
-                            color: black;
+                            color: var(--text-color);
                             font-size: 0.9rem;
                         }
                     }
@@ -154,22 +138,19 @@
             justify-content: center;
             align-items: center;
             gap: 1rem;
-            box-shadow:
-                5px 5px 10px #aaaaaa,
-                -5px -5px 10px #ffffff;
             border: none;
             cursor: pointer;
-            background: linear-gradient(105deg, #5232c1, #15f1f1);
+            transition: all 0.2s ease-in-out;
+            text-shadow: var(--text-shadown);
+            box-shadow: var(--box-shadow);
+            background: var(--linear-grd-text-color);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
             i {
                 font-size: 1.6rem;
             }
-            &:active {
-                -webkit-transform: scale(0.98);
-                transform: scale(0.98);
+            &:hover {
+                box-shadow: var(--box-shadow-hover);
             }
         }
     }

@@ -1,0 +1,24 @@
+$white: #feeeee;
+
+html.dark-theme {
+    --body-bg-color: #000000;
+    --text-color: #ffffff;
+    --color-bg: #272727;
+    --color-shadow: #141414;
+    --box-shadow: -5px -5px 20px #212121, 5px 5px 20px #141414;
+    --box-shadow-hover: -2px -2px 5px #212121, 2px 2px 5px #141414;
+    --text-shadown: "";
+    --linear-grd-text-color: linear-gradient(105deg, #ffffff, #ffffff);
+    --label-color: #757575;
+}
+
+html {
+    --body-bg-color: #ffffff;
+    --text-color: #6f7275;
+    --color-bg: #eaeaea;
+    --color-shadow: #ffffff;
+    --box-shadow: 5px 5px 10px #aaaaaa, -5px -5px 10px #ffffff;
+    --box-shadow-hover: -2px -2px 5px #aaaaaa, 2px 2px 5px #ffffff;
+    --linear-grd-text-color: linear-gradient(105deg, #5232c1, #15f1f1);
+    --label-color: #6f7275;
+}

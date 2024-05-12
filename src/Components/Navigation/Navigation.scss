@@ -11,15 +11,20 @@
         display: none;
     }
     button {
-        margin: 10px;
-        padding: 0.5rem;
         border: none;
         cursor: pointer;
-        box-shadow:
-            5px 5px 10px #aaaaaa,
-            -5px -5px 10px #ffffff;
         border-radius: 0.5rem;
         font-size: 1.6rem;
+        transition: all 0.2s ease-in-out;
+        text-shadow: var(--text-shadown);
+        box-shadow: var(--box-shadow);
+        background-color: var(--color-bg);
+        &:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+        i {
+            padding: 0.2rem;
+        }
     }
 }
 .navigation {
@@ -53,17 +58,13 @@
             cursor: pointer;
             border: none;
             border-radius: 0.5rem;
-            box-shadow:
-                5px 5px 10px #aaa,
-                -5px -5px 10px #fff;
-            color: #6f7275;
             cursor: pointer;
             gap: 0.5rem;
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
-            &:active {
-                -webkit-transform: scale(0.98);
-                transform: scale(0.98);
+            transition: all 0.2s ease-in-out;
+            text-shadow: var(--text-shadown);
+            box-shadow: var(--box-shadow);
+            &:hover {
+                box-shadow: var(--box-shadow-hover);
             }
             & i {
                 font-size: 1.4rem;
@@ -76,14 +77,10 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
-            &:active {
-                -webkit-transform: scale(0.98);
-                transform: scale(0.98);
-            }
+            transition: all 0.2s ease-in-out;
         }
         & .selected {
+            box-shadow: var(--box-shadow-hover);
             background: linear-gradient(90deg, #5232c1, #15f1f1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -96,12 +93,10 @@
     width: 60%;
     height: 100vh;
     top: 0;
-    background: #eaeaea;
+    background: var(--color-bg);
     padding: 1rem;
-    // overflow: hidden;
     &-overlay {
         margin-bottom: 1rem;
-        background-color: rgba($color: #000000, $alpha: 0.5);
         position: absolute;
         width: 60%;
         height: 100vh;
@@ -120,16 +115,19 @@
         top: 0;
         z-index: 3;
         & button {
+            color: var(--text-color);
             width: 2.5rem;
             height: 2.5rem;
             border: none;
             cursor: pointer;
-            box-shadow:
-                5px 5px 10px #aaaaaa,
-                -5px -5px 10px #ffffff;
             border-radius: 50%;
-            transition: all 0.3s;
             font-size: 1.6rem;
+            transition: all 0.2s ease-in-out;
+            box-shadow: var(--box-shadow);
+            background-color: var(--color-bg);
+            &:hover {
+                box-shadow: var(--box-shadow-hover);
+            }
         }
     }
 }
