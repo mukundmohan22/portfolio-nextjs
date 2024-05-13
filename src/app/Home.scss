@@ -10,13 +10,12 @@
         gap: 1rem;
         padding: 1rem;
         @include min-width(sm) {
-            flex-direction: row;
-            flex-wrap: wrap;
+            // flex-direction: row;
+            // flex-wrap: wrap;
             min-width: 23rem;
             padding: 1.5rem;
         }
         & .hCard {
-            max-width: 100%;
             display: flex;
             gap: 1rem;
             border-radius: 20px;
@@ -24,13 +23,16 @@
             padding: 1rem;
             @include min-width(sm) {
                 gap: 2rem;
-                max-width: 17.6rem;
+                flex: 50%;
             }
             &:first-child {
                 background-color: rgba($color: #ff7878, $alpha: 0.1);
             }
             &:nth-child(2) {
                 background-color: rgba($color: #5232c1, $alpha: 0.1);
+            }
+            &:nth-child(3) {
+                background-color: rgba($color: #15f1f1, $alpha: 0.1);
             }
             &:last-child {
                 background-color: rgba($color: #ddbdfc, $alpha: 0.1);
@@ -49,6 +51,11 @@
                     -webkit-text-fill-color: transparent;
                 }
                 & .fa-window-restore {
+                    background-image: linear-gradient(80deg, #cc3757, #df5b5e);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                & .fa-gears {
                     background-image: linear-gradient(80deg, #ddbdfc, #96c8fb);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;

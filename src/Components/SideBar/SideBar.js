@@ -81,10 +81,10 @@ const SideBar = () => {
         </ul>
       </div>
       <div className="sidebar_footer">
-        <button>
+        <a href="file/Mukund_Mohan.pdf" download>
           <i className="fa-solid fa-download"></i>
           Download CV
-        </button>
+        </a>
         <Link href="/contact">
           <i className="fa-regular fa-address-book"></i>
           Contact Me

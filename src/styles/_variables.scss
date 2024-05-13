@@ -12,6 +12,7 @@ html.dark-theme {
     --label-color: #757575;
     --box-shadow-active: inset 1px 1px 2px #141414, inset -1px -1px 2px #212121;
     --input-box-shadow: inset 2px 2px 5px #141414, inset -5px -5px 10px #212121;
+    --title-linear-grd: linear-gradient(90deg, #fe0944, #ff7878);
 }
 
 html {
@@ -26,4 +27,6 @@ html {
 
     --box-shadow-active: inset 1px 1px 2px #ffffff, inset -1px -1px 2px #aaaaaa;
     --input-box-shadow: inset 5px 5px 5px #aaaaaa, inset -5px -5px 5px #ffffff;
+
+    --title-linear-grd: linear-gradient(105deg, #5232c1, #15f1f1);
 }

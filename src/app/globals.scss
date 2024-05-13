@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
-
 @import "../styles/_mixins.scss";
-
 @import "../styles/_variables.scss";
 
 .poetsen-one-regular {
@@ -44,6 +42,7 @@ body {
   color: var(--text-color);
   @extend .roboto-slab-normal;
 }
+
 .box-shadow {
   padding: 2rem;
   border-radius: 20px;
@@ -60,21 +59,20 @@ body {
   }
   & .title {
     position: relative;
-    font-size: 1.8rem;
-    font-weight: 500;
     padding: 1rem;
     @include min-width(sm) {
       padding: 1rem 2rem;
     }
-    &::after {
-      content: " ";
-      border-top: 4px solid var(--text-color);
-      position: absolute;
-      bottom: 0;
-      left: 10rem;
-      right: 0;
-      height: 2rem;
-      max-width: 8rem;
+    & span {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    &-border {
+      width: 15rem;
+      padding: 1rem;
+      position: relative;
+      background: var(--title-linear-grd);
+      padding: 3px;
     }
   }
   & .description {
@@ -84,9 +82,18 @@ body {
     }
   }
   & .sub-title {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 1.2rem;
     font-weight: 500;
     padding: 1rem;
+    // & i {
+    //   background: var(--title-linear-grd);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
     @include min-width(sm) {
       padding: 1rem 2rem;
     }
@@ -109,4 +116,14 @@ body {
     position: relative !important;
     height: unset !important;
   }
+}
+
+/*
+CSS to override the Toast message theme 
+*/
+
+.Toastify__toast-theme--dark {
+  background: var(--color-bg) !important;
+  color: var(--text-color) !important;
+  box-shadow: var(--box-shadow) !important;
 }

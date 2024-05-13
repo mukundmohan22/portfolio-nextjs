@@ -15,11 +15,11 @@ const ThemeSwitcher = () => {
   };
   return (
     <div className="theme-container">
-      {/* <span>Theme Switcher</span> */}
       <label id="switch" className="switch">
-        <input type="checkbox" onClick={(e) => toggleTheme(e)} id="slider" />
+        <input type="checkbox" onClick={(e) => toggleTheme(e)} id="slider" defaultChecked={true} />
         <span className="slider round"></span>
       </label>
+      {/* <span>Theme Switcher</span> */}
     </div>
   );
 };

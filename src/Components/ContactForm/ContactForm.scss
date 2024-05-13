@@ -7,6 +7,7 @@
                 padding: 1rem 2rem;
             }
             & input[type="text"],
+            input[type="email"],
             textarea {
                 box-shadow: var(--input-box-shadow);
                 min-width: 100%;
@@ -20,6 +21,8 @@
                 padding: 16px;
                 background-color: var(--color-bg);
                 // text-shadow: 1px 1px 0 #212121;
+                appearance: none;
+                -webkit-appearance: none;
             }
             & input[type="submit"],
             button {
