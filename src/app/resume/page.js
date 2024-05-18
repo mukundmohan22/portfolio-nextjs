@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./resume.scss";
 export default function page() {
   return (
@@ -10,16 +11,13 @@ export default function page() {
         <div className="sub-title">Working Skills</div>
         <div className="skills">
           {SKILLS.map((el, i) => {
-            const bgClassName = `bg-${(i % 4) + 1}`;
+            // const bgClassName = `bg-${(i % 4) + 1}`;
             return (
               <div className="skill" key={i}>
-                <div className="skill--title">
-                  <span>{el.name}</span>
-                  <span>{el.level}</span>
+                <div className="skill--icon">
+                  <Image src={el.url} alt={el.name} className={"image"} height={40} width={40} />
                 </div>
-                <div className="skill--bar">
-                  <div class={`progress ${bgClassName}`} style={{ width: el.level }}></div>
-                </div>
+                <div className="skill--title">{el.name}</div>
               </div>
             );
           })}
@@ -95,45 +93,95 @@ const SKILLS = [
   {
     name: "JavaScript",
     level: "80%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
   },
   {
     name: "ReactJs",
     level: "85%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
   },
   {
     name: "Next.js",
     level: "80%",
+    url: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
   },
   {
     name: "VBCS",
     level: "60%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg",
   },
   {
     name: "React Native",
     level: "55%",
+    url: "https://reactnative.dev/img/header_logo.svg",
   },
   {
-    name: "CSS",
+    name: "Java",
     level: "75%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+  },
+  {
+    name: "CSS3",
+    level: "75%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
   },
   {
     name: "Git",
     level: "60%",
+    url: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
   },
   {
     name: "Oracle ADF",
     level: "90%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg",
   },
   {
     name: "HTML5",
     level: "80%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
   },
   {
     name: "Node.js",
     level: "70%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
   },
   {
     name: "MongoDB",
     level: "40%",
+    url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+  },
+];
+
+const PROJECTS = [
+  {
+    title: "Zigyan Online learning portal",
+    category: "Zigyan is Online learning portal frontend on React with spring boot as backend",
+    image: "zigyan.png",
+    url: "https://www.zigyan.com/",
+  },
+  {
+    title: "WhatsApp Clone",
+    category: "WhatsApp Clone build with React JS,Google authentication and real time DB integration",
+    image: "whats-app.png",
+    url: "https://whatsapp-clone-fbd8e.web.app/rooms/tWGvYsnaqHAO2FnuACYQ",
+  },
+  {
+    title: "Amazon Clone",
+    category:
+      "Amazon Clone created with React JS with User Authentication using Firebase. React Context API for State Management",
+    image: "amazon.png",
+    url: "https://clone-69870.web.app/",
+  },
+  {
+    title: "Facebook Massenger Clone with React",
+    category: "Facebook Clone built with ReactJS",
+    image: "fb-messenger.png",
+    url: "https://fb-messenger-clone-bc070.web.app/",
+  },
+  {
+    title: "Instagram Reel Clone",
+    category: "Instagram Reel Clone built with ReactJS",
+    image: "reel.png",
+    url: "https://ig-reels-50432.web.app/",
   },
 ];
