@@ -80,7 +80,7 @@
                 font-size: 1rem;
             }
             &:hover {
-                background: linear-gradient(90deg, #5232c1, #15f1f1);
+                background: var(--title-linear-grd);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -88,7 +88,7 @@
         }
         & .selected {
             box-shadow: var(--box-shadow-hover);
-            background: linear-gradient(90deg, #5232c1, #15f1f1);
+            background: var(--title-linear-grd);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }

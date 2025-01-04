@@ -1,0 +1,61 @@
+@import "../../styles/mixins";
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    & .project {
+        text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        box-shadow: var(--box-shadow);
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: 100%;
+        @include min-width(sm) {
+            flex-direction: row;
+        }
+        &--icon {
+            width: 100%;
+            border-radius: 0.4rem;
+            @include min-width(sm) {
+                flex-direction: row;
+            }
+            img {
+                border-radius: 0.5rem;
+            }
+            box-shadow: var(--box-shadow-hover);
+
+            @include min-width(sm) {
+                min-width: 18rem;
+                max-width: 18rem;
+            }
+        }
+        &--main {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            &--title {
+                color: var(--label-color);
+                display: flex;
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+            &--desc {
+                color: var(--label-color);
+                display: flex;
+                font-weight: 300;
+            }
+        }
+        &:hover {
+            background: var(--title-linear-grd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            box-shadow: var(--box-shadow-hover);
+        }
+        transition: all 0.2s ease-in-out;
+    }
+}
